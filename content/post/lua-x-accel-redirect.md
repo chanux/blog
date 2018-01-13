@@ -1,9 +1,8 @@
-+++
-date = "2016-06-07T20:43:56+05:30"
-description = ""
-title = "Using X-Accel-Redirect with lua"
+---
+date: 2016-06-07T20:43:56+05:30
+title: "Using X-Accel-Redirect with lua"
 
-+++
+---
 
 I had used X-Accel-Redirect with Python/Flask and nginx at work. I wanted to do the same with lua for a hobby project.
 So the title is what I Googled for when I wanted to serve files with nginx-lua.

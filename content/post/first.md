@@ -1,8 +1,8 @@
-+++
-date = "2015-10-19T21:19:34+05:30"
-title = "The First Post"
+---
+title: "The First Post"
+date: 2015-10-19T21:19:34+05:30
 
-+++
+---
 
 Another superfluous achievement in the chase of new and shiny. Oh who am I kidding?.
 Static sites have been here forever. Hugo has been here for so long. Heck this blog post itself has been on my machine since last year.
