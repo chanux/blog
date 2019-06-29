@@ -1,20 +1,20 @@
 ---
 title: "Automate Static Site Publishing on GCP"
 date: 2019-06-27T12:58:21+08:00
-draft: true
 ---
 
-I. Love. Material for MkDocs.
+I. Love. [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)!
 
-I've been using the combination in every single place I worked in to document
-things. And everyone loves it. Recently I had to share some of my notes with my
-colleagues and realized we are oceans apart. So I put it on a VM and
-shared.Nothing fancy. I had shell script with a bit of rsync to deploy the
-static site. It never felt archaic until my work suddenly involved public cloud.
+I've been using the MkDocs - Material for MkDocs combination in every. single.
+place. I worked in, to document things. And everyone loves it. Recently I had
+to share some of my notes with my colleagues and realized we are oceans apart.
+So I put it on a VM and shared. Nothing fancy. I had a shell script involving
+a bit of rsync to deploy the site. It never felt archaic until my work suddenly
+involved public cloud.
 
 It's just a static site. I should be writing docs and pushing it to the git
 repo. The rest is for the machines to do! So I got the machines to do it for
-me.  Following is one way to achieve this.
+me.  Following is one way of doing it.
 
 I'll be using Google Cloud Platform (GCP) because that's what I'm most familiar
 with these days. The plan is to push the content in git to a [Google Source
@@ -29,9 +29,9 @@ I use [Coloudflare](https://www.cloudflare.com/) for DNS and their http(s)
 proxy becuase it's free, awesome and provides free https.
 
 And the whole thing is (mostly) automated with
-[Terraform](https://www.terraform.io/)
+[Terraform](https://www.terraform.io/)!
 
-Check following digaram because we all love nice diagrams.
+Check the following digaram[^1], because we all love nice diagrams.
 
 [![What To Achieve](/blog/images/automate-static-site-publishing-on-gcp/goal.png)](/blog/images/automate-static-site-publishing-on-gcp/goal.png)
 
@@ -41,7 +41,7 @@ my notes site [notes.chanux.me](https://notes.chanux.me). To continue, you need
 to know the basics of Terraform. Don't worry, my notes site [has got you
 covered](https://notes.chanux.me/terraform/the-basics/).
 
-First of all we need to prove ownership of the domain to Google so that we can
+First of all, we need to prove ownership of the domain to Google so that we can
 create GCS bucket to store the site content.
 
 Go to [Google Site Ownership Vierfication
@@ -67,7 +67,7 @@ Once the ownership is verified, add the email of your GCP Service Account
 created for Terraform access under **Verification details** section for your
 domain in [Webmaster
 Central](https://www.google.com/webmasters/verification/home). This allows
-creating the GCS bucket with Terraform. Also enable following APIs in GCP for
+creating the GCS bucket with Terraform. Also, enable following APIs in GCP for
 smooth terraform execution.
 
 - [Cloud Source Repositories API](https://console.developers.google.com/apis/api/sourcerepo.googleapis.com/overview)
@@ -107,7 +107,9 @@ docker push asia.gcr.io/<gcp-project-id>/mkdocs-material
 
 Now it's all ready to push code and hopefully have the site built and deployed.
 Assuming we have our docs secure in git repository, we need to push the code to
-Google Source Repository.
+Google Source Repository. Just make sure that you have
+[configured](https://notes.chanux.me/gcp/tips/#google-source-repository-git-access)
+git to access Google Source Repositories.
 
 ```bash
 git remote add google https://source.developers.google.com/p/<gcp-project-id>/r/<cloud-sourc-repository-name>
@@ -117,4 +119,31 @@ git remote add google https://source.developers.google.com/p/<gcp-project-id>/r/
 git push -u google master
 ```
 
-Just visit the domain name you chose for your site and it should be ready in a minute :D
+Just visit the domain name you chose for your site and it should be ready in
+a minute :D
+
+The magic here is the build trigger we setup with Terraform, which will trigger
+the build. It will use the `cloudbuild.yaml` file in our sorce repo to know
+what to do. It consists of two **build step**s.
+
+```
+steps:
+    - name: 'asia.gcr.io/$PROJECT_ID/mkdocs-material'
+      args: ['build']
+    - name: 'gcr.io/cloud-builders/gsutil'
+      args: ['cp', '-r', 'site/*', 'gs://$_GCS_BUCKET_NAME/']
+```
+
+The first build step is basically the mkdoc-material docker image we pulled
+from docker hub and pushed to GCR. Google cloud build will basically launch
+a container with that image mounting **workspace**, which is the root of our
+source repo and run `build`. mkdocs-material will use the content from `docs`
+directory and the `mkdocs.yml` file and build the site into `site` directory,
+which will be in the **workspace**.
+
+The second build step, the `gsutil` container provided by GCP team will copy
+over the content at `site` directory in to the GCS bucket we created with
+Terraform. If you noticed the varibale `_GCS_BUCKET_NAME`, that's an
+environment variable set when configuring the build trigger.
+
+[^1]: The diagram is generated on [Whimsical](https://whimsical.com/). I know, it's pretty.
