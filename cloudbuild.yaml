@@ -1,6 +1,8 @@
 steps:
     - name: 'asia.gcr.io/$PROJECT_ID/hugo'
       args: ['version']
+    - name: gcr.io/cloud-builders/git
+      args: ['submodule', 'update', '--init', '--recursive']
     - name: 'asia.gcr.io/$PROJECT_ID/hugo'
       args: ['--verbose']
     - name: 'gcr.io/cloud-builders/gsutil'
