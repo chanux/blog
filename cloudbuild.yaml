@@ -8,6 +8,7 @@ steps:
           - --branch=master
           - --single-branch
           - https://github.com/digitalcraftsman/hugo-cactus-theme.git
+          - themes/cactus-x
     - name: 'asia.gcr.io/$PROJECT_ID/hugo'
       args: ['--theme', 'cactus-x']
     - name: 'gcr.io/cloud-builders/gsutil'
