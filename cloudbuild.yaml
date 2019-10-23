@@ -1,6 +1,4 @@
 steps:
-    - name: 'asia.gcr.io/$PROJECT_ID/hugo'
-      args: ['version']
     - name: gcr.io/cloud-builders/git
       args:
           - clone
@@ -13,3 +11,5 @@ steps:
       args: ['--theme', 'cactus-x']
     - name: 'gcr.io/cloud-builders/gsutil'
       args: ['cp', '-r', 'public/*', 'gs://$_GCS_BUCKET_NAME/blog']
+    - name: 'gcr.io/cloud-builders/gsutil'
+      args: ['cp', 'homepage/*', 'gs://$_GCS_BUCKET_NAME/']
