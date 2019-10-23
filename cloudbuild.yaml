@@ -2,8 +2,8 @@ steps:
     - name: 'asia.gcr.io/$PROJECT_ID/hugo'
       args: ['version']
     - name: gcr.io/cloud-builders/git
-      args: ['submodule', 'update', '--init', '--recursive']
+      args: ['clone', '-–depth', '1', 'https://github.com/digitalcraftsman/hugo-cactus-theme.git', 'themes/cactus-x']
     - name: 'asia.gcr.io/$PROJECT_ID/hugo'
-      args: ['--verbose']
+      args: ['--theme', 'cactus-x']
     - name: 'gcr.io/cloud-builders/gsutil'
       args: ['cp', '-r', 'public/*', 'gs://$_GCS_BUCKET_NAME/blog']
