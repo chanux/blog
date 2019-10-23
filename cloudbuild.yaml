@@ -2,7 +2,11 @@ steps:
     - name: 'asia.gcr.io/$PROJECT_ID/hugo'
       args: ['version']
     - name: gcr.io/cloud-builders/git
-      args: ['clone', '-–depth=1', 'https://github.com/digitalcraftsman/hugo-cactus-theme.git', 'themes/cactus-x']
+      args:
+          - clone
+          - --depth=1
+          - --branch=master
+          - --single-branch
     - name: 'asia.gcr.io/$PROJECT_ID/hugo'
       args: ['--theme', 'cactus-x']
     - name: 'gcr.io/cloud-builders/gsutil'
