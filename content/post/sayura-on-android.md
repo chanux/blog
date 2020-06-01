@@ -1,7 +1,7 @@
 ---
 title: "Sayura on Android"
 date: 2020-06-01T14:19:42+08:00
-draft: true
+draft: false
 ---
 
 **TLDR**: Something I built had issues due to browser/platform quirks.
