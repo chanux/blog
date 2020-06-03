@@ -7,7 +7,7 @@ draft: false
 **TLDR**: Something I built had issues due to browser/platform quirks.
 `keypress` (deprecated), `keydown`, `keyup` are not supported on browsers on
 Android. The next option `input` event behaves differently on mobile platforms.
-Firefox on Andorid emits `input` event for soft edits too,
+Firefox on Andorid emits `input` event for soft edits too.
 
 Sayura is a project I built to scratch my own itch which is not being able to
 type Sinhala anywhere. It was done in a time we had worse support for Sinhala
@@ -80,9 +80,17 @@ gotta find a solution to this quirk.
 As always, brute force brought me to a decent-ish solution. Nothing I'm
 especially proud of but hey, it works.
 
+During this whole process I was quite angry at 'the state of things' on web.
+Isn't it almost like the web is NOT a unifying platform anymore? But once
+I learned why things have to be the way they are I statrted to
+[appreciate](https://ferd.ca/complexity-has-to-live-somewhere.html) 'the
+complexity if trivial things' more. The ride was quite educational and
+humbling. 
+
 I also tried to asses the Google Lighthouse score for Sayura page and make the
-suggested improvements. Hope it will help more people find it and probably make
-for better usability. Speaking of better usability, I could do much better than
-just serving the demo page I originally created. But that would require me
-to work with this scary technology called CSS. Trust me I've tried it
-before and still have PTSD. But I'll eventually brave up and get to it.
+suggested improvements. Hope it will help more people find the site and
+probably makes for better usability. Speaking of better usability, I could do
+much better than just serving the demo page I originally created. But that
+would require me to work with this scary technology called CSS. Trust me I've
+tried it before and still have PTSD. But I'll eventually brave up and get to
+it.
