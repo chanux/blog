@@ -59,7 +59,7 @@ That's that.
 I have been hacking with nginx-lua on and off and I seem to come back to it when I'm miserably bored.
 This stuff is pretty interesting. Or it probably gives me a false sense of achievement or whatever.
 If you want to try out nginx-lua I have put together [something](https://github.com/chanux/dockerfiles/tree/master/rusty) which you can start with.
-Currently I'm working on something more flexible than that, someting I can base my hobby nginx-lua projects on. I'll definitely report if I ever finish it.
+Currently I'm working on something more flexible than that, something I can base my hobby nginx-lua projects on. I'll definitely report if I ever finish it.
 
 Maybe follow me on [twitter](https://twitter.com/chanux). Who am I to say you **should**?
 

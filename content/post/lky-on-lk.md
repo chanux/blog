@@ -5,7 +5,7 @@ draft: false
 ---
 
 The adventures of Lee Kuan Yew was not a strange topic for me. We Sri Lankans
-get to hear about him a lot. Mostly in the context [how useless our politians
+get to hear about him a lot. Mostly in the context [how useless our politicians
 are](http://www.sthomascollege.com/Excerpt.htm). Oh, and how Singapore was
 built taking Sri Lanka as an example. We'd probably get to that later.
 
@@ -16,14 +16,14 @@ details until recently.
 
 So there was this time, several months back, I started reading about him,
 anything I can find.  Once I was done, went through a bunch of videos on
-youtube as well, like a good pleb.
+YouTube as well, like a good pleb.
 
 His views on democracy felt like a well thought out version of what I
 thought of it (but I don't wanna discuss my politics here). Also, I saw him
 as this charismatic figure who could sell cold, lonely nights, for a premium, 
 if he tried.
 
-Anyhow, while reading about him, whenver I came across any comments about Sri
+Anyhow, while reading about him, whenever I came across any comments about Sri
 Lanka I felt like I should put these things in one place. Just to show the
 people who use a vague LKY quote on a once great Sri Lanka. So here I list down
 a couple of excerpts I could find links to online.
@@ -60,9 +60,9 @@ Excerpts from an interview with Lee Kuan Yew - [Newyork Times](http://www.nytime
 > makes no big difference to the tragedy that is being enacted. They failed
 > because they had weak or wrong leaders, like the Philippines. 
 
-[Sinagpore Parliament Archives](http://sprs.parl.gov.sg/search/email/link/?id=012_19941101_S0002_T0003&fullContentFlag=true)
+[Singapore Parliament Archives](http://sprs.parl.gov.sg/search/email/link/?id=012_19941101_S0002_T0003&fullContentFlag=true)
 
-The bginning of above excerpt is decent proof that LKY probably praised  Sri
+The beginning of above excerpt is decent proof that LKY probably praised  Sri
 Lanka at some point for being better than Singapore. I haven't seen the exact
 quote everyone is proud about though (Above comment is from 1994). Because in
 this, he goes on to explain *why* Sri Lanka was better. For me this only gives
@@ -103,7 +103,7 @@ one of the die hard patriot kind :D. I guarantee it's not getting any better.
 > democracies when they work. He’s against defending them just because they are
 > democracies.  
 
-Giants of Asia: Conversations with Lee Kuan Yew - Tom PLates [Google books](https://books.google.com.sg/books?id=FgiJAAAAQBAJ&pg=PA63&lpg=PA63#v=onepage&q&f=false)
+Giants of Asia: Conversations with Lee Kuan Yew - Tom Plates [Google books](https://books.google.com.sg/books?id=FgiJAAAAQBAJ&pg=PA63&lpg=PA63#v=onepage&q&f=false)
 
 So that's that. My motherland was not exempt from LKY's signature cold, harsh
 truth treatments.  You can see that he probably only had one good thing to say

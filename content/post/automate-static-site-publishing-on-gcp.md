@@ -26,12 +26,12 @@ and push the site in to a [Google Cloud
 Storage](https://cloud.google.com/storage/) (GCS) bucket.
 
 I use [Coloudflare](https://www.cloudflare.com/) for DNS and their http(s)
-proxy becuase it's free, awesome and provides free https.
+proxy because it's free, awesome and provides free https.
 
 And the whole thing is (mostly) automated with
 [Terraform](https://www.terraform.io/)!
 
-Check the following digaram[^1], because we all love nice diagrams.
+Check the following diagram[^1], because we all love nice diagrams.
 
 [![What To Achieve](/blog/images/automate-static-site-publishing-on-gcp/goal.png)](/blog/images/automate-static-site-publishing-on-gcp/goal.png)
 
@@ -44,7 +44,7 @@ covered](https://notes.chanux.me/terraform/the-basics/).
 First of all, we need to prove ownership of the domain to Google so that we can
 create GCS bucket to store the site content.
 
-Go to [Google Site Ownership Vierfication
+Go to [Google Site Ownership Verification
 page](https://www.google.com/webmasters/verification/home?hl=en) Use *ADD
 PROPERTY* button to add your domain. Select the DNS based verification
 option and find the random string provided as
@@ -68,12 +68,12 @@ created for Terraform access under **Verification details** section for your
 domain in [Webmaster
 Central](https://www.google.com/webmasters/verification/home). This allows
 creating the GCS bucket with Terraform. Also, enable following APIs in GCP for
-smooth terraform execution.
+smooth Terraform execution.
 
 - [Cloud Source Repositories API](https://console.developers.google.com/apis/api/sourcerepo.googleapis.com/overview)
 - [Cloud Build API](https://console.developers.google.com/apis/api/cloudbuild.googleapis.com/overview)
 
-Now run the rest of terraform which will create the GCS bucket to store site
+Now run the rest of Terraform which will create the GCS bucket to store site
 content, Google Source Repository to store source and the build trigger to
 build the site when we push to the source repo.
 
@@ -123,7 +123,7 @@ Just visit the domain name you chose for your site and it should be ready in
 a minute :D
 
 The magic here is the build trigger we setup with Terraform, which will trigger
-the build. It will use the `cloudbuild.yaml` file in our sorce repo to know
+the build. It will use the `cloudbuild.yaml` file in our source repo to know
 what to do. It consists of two **build step**s.
 
 ```
@@ -143,7 +143,7 @@ which will be in the **workspace**.
 
 The second build step, the `gsutil` container provided by GCP team will copy
 over the content at `site` directory in to the GCS bucket we created with
-Terraform. If you noticed the varibale `_GCS_BUCKET_NAME`, that's an
+Terraform. If you noticed the variable `_GCS_BUCKET_NAME`, that's an
 environment variable set when configuring the build trigger.
 
 [^1]: The diagram is generated on [Whimsical](https://whimsical.com/). I know, it's pretty.

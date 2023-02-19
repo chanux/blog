@@ -9,14 +9,14 @@ uses quite a bit of Ansible so I have been learning a lot. I had touched
 Ansible before but that was just to put together something to help me with
 copying stuff over and over to a bunch of servers.
 
-The requirement of current project is to programmatically run an ansible
+The requirement of current project is to programmatically run an Ansible
 playbook on a server newly provisioned. Going in without knowing much about
 Ansible, one could easily believe that it's as easy as passing the new host.
 Well that's not how things turned out for me.
 
 My colleague who was working on it when I joined has settled with a dynamic
 inventory solution but I was not convinced it's the way to go. I couldn't
-exactly say how else to do it either. Ofcourse I did venture into deep dark
+exactly say how else to do it either. Of course I did venture into deep dark
 webs couple times, determined to find a solution that didn't involve dynamic
 inventory, only to return.. empty handed. Things are extra complicated when you
 have to work with old versions of software and that too in offline
@@ -97,7 +97,7 @@ out of dynamic inventory but my google foo failed me yet again. Anyhow, you can
 provide a [directory as the inventory](http://allandenot.com/devops/2015/01/16/ansible-with-multiple-inventory-files.html).
 Ansible will process all the files in that, including executable scripts like
 the dynamic inventory file shown above. This way, you can free the dynamic
-inventory from statis variables.
+inventory from static variables.
 
 ```
 % tree .

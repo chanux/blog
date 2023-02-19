@@ -5,7 +5,7 @@ date: 2018-03-04T09:40:00+08:00
 
 When I started at my current workplace my world was shattered (Obvious
 exaggeration). I realized I had to work on windows day in day out. Of course
-I would be logging in to linux servers for most of the actual work but I really
+I would be logging in to Linux servers for most of the actual work but I really
 missed the comfy and friendly unixy tools. Yes there were options but they did
 not even come close to the user experience I were used to.
 
@@ -31,7 +31,7 @@ If you are here, you are likely to be enjoying corporate proxies. This is
 problematic to tools like wget and curl. And of course Babun itself because it
 needs to update itself. So you'd have to find the proxy url from your browser
 settings and update your ~/.babunrc file. Set *http_proxy* and *https_proxy*
-environemt variables accordingly (in ~/.zshrc). Or else you can set proxy
+environment variables accordingly (in ~/.zshrc). Or else you can set proxy
 settings in ~/.wgetrc or ~/.curlrc too.
 
 Babun offers pact a package manager which is based on cyg-apt. To try it out..
@@ -44,7 +44,7 @@ We all need tree in our lives.
 
 BTW, not all is sunshine, trees and unicorns. pact install seems to break
 things as of writing.  the remedy would be to simply run `babun update`, which
-you'd need to do occassionally to keep it all updated anyway.  Guess what,
+you'd need to do occasionally to keep it all updated anyway.  Guess what,
 babun update is also broken and doesn't seem to get much love for now. But not
 hopes are lost.
 

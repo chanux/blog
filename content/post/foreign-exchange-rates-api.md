@@ -70,18 +70,18 @@ NOTE: DBS is Development Bank of Singapore
 
 In currency data, *buying* and *selling* fields are for the respective exchange
 rates for **currency notes**. tt in buying_tt/selling_tt means **Telegraphic
-Transfer**. Similarly, *buying_c_d/selling_c_d* is for rates for **Travellers
+Transfer**. Similarly, *buying_c_d/selling_c_d* is for rates for **Travelers
 Cheques** and **Demand Drafts**. These seem to be also called OD (On Demand).
 
 I have tried to come up with a common format that works across different banks.
-Differnet banks present varying amounts of data sometimes with different
+Different banks present varying amounts of data sometimes with different
 terminology. For example HNB presents very little data and they don't care to
 mention the date (So I had to find another way to find out the date). There is
 a chance I misunderstood something or made a mistake in representing something.
 Please report if you come across such issues.
 
-I hope this is useful to somene. It would be amazing to have a nice unified UI
-for excnage rates across banks. I guess this API would make things easy for
+I hope this is useful to someone. It would be amazing to have a nice unified UI
+for exchange rates across banks. I guess this API would make things easy for
 anyone who wants to take a shot at building it :).
 
 PS: My scraper has been breaking due to date format change of several banks so

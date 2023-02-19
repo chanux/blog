@@ -7,7 +7,7 @@ draft: false
 **TLDR**: Something I built had issues due to browser/platform quirks.
 `keypress` (deprecated), `keydown`, `keyup` are not supported on browsers on
 Android. The next option `input` event behaves differently on mobile platforms.
-Firefox on Andorid emits `input` event for soft edits too.
+Firefox on Android emits `input` event for soft edits too.
 
 Sayura is a project I built to scratch my own itch which is not being able to
 type Sinhala anywhere. It was done in a time we had worse support for Sinhala
@@ -22,7 +22,7 @@ That's why I decided to get one with [Vercel](https://vercel.com/). Vercel
 makes modern web app deployment a breeze. And most importantly,  it gives you
 a nice, short URL.
 
-So I just tried vercel, which turned out to be an excellent experience and got
+So I just tried Vercel, which turned out to be an excellent experience and got
 my nice url. Proud of this achievement, I shared this on Twitter and went on
 with my life. I didn't expect the many replies pointing out that my beloved
 hobby project is broken.
@@ -82,7 +82,7 @@ especially proud of but hey, it works.
 
 During this whole process I was quite angry at 'the state of things' on web.
 Isn't it almost like the web is NOT a unifying platform anymore? But once
-I learned why things have to be the way they are I statrted to
+I learned why things have to be the way they are I started to
 [appreciate](https://ferd.ca/complexity-has-to-live-somewhere.html) 'the
 complexity if trivial things' more. The ride was quite educational and
 humbling. 

@@ -24,8 +24,8 @@ Below are the main ingredients of the system
 - [object-serve](https://codeberg.org/chanux/object-serve) - Custom software
   that can serve static files from a private GCS or S3 bucket.
 
-I'd force compute in, a fourth ingredient, just to make an analogy to Flour
-water salt yeast[1], to just show how "easy" this is! I personally host all
+I'd force compute in, a fourth ingredient, to make an analogy to Flour
+water salt yeast[1], to show just how "easy" this is! I personally host all
 these on a small cloud VM (run with systemd) and it's only occassionally
 annoying. That too is because I have not automated the deployment. However,
 I once automated[2] building/deploying the static site to object storage (GCS
