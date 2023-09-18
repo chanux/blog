@@ -4,4 +4,4 @@ title: "about"
 
 ---
 
-This is the about page of  my site
+This site uses [Mini, the Hugo theme](https://github.com/nodejh/hugo-theme-mini).
