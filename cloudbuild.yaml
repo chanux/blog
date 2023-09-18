@@ -5,8 +5,8 @@ steps:
           - --depth=1
           - --branch=master
           - --single-branch
-          - https://github.com/digitalcraftsman/hugo-cactus-theme.git
-          - themes/cactus-x
+          - https://github.com/nodejh/hugo-theme-mini
+          - themes/mini
     - name: 'asia.gcr.io/$PROJECT_ID/hugo'
       args: ['--theme', 'cactus-x']
     - name: 'gcr.io/cloud-builders/gsutil'

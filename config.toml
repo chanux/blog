@@ -1,39 +1,15 @@
 baseurl = "https://chanux.me/blog/"
-title = "Chanux"
-theme = "hugo-cactus-theme"
+title   = "Chanux"
+theme   = "mini"
 
 [params]
-    name = "Chanux"
-    bio = "I am nothing"
-    # Enter optionally your twitter account
-    twitter = "chanux"
-    # Disable comments by leaving disqusShortname empty
-    #disqusShortname = ""
-    # Enter your tracking code to enable Google Analytics
-    googleAnalytics = ""
-    enableRSS = true
+    author  = "Chanux"
+    bio     = "I am nothing"
 
-    # The variables below are optionally too and can be used to
-    # translate or customize each string of the theme.
+    twitter     = "chanux"
+    enableRSS   = true
+    showPowerBy = false
 
-    # Navigation links
-    home = ""
-    about = ""
-    subscribe = ""
-    # Pagination links
-    olderPosts = ""
-    newerPosts = ""
-    readMore = ""
-    copyright = ""
-    # Sharing options and author information in posts
-    aboutAuthor = ""
-    tweet = ""
-    share = ""
-    # 404 page
-    title404 = ""
-    subtitle404 = ""
-
-# Add additional social link entries underneath
 [social]
-    twitter  = "https://www.twitter.com/chanux"
-    github = "https://www.github.com/chanux"
+    twitter = "https://www.twitter.com/chanux"
+    github  = "https://www.github.com/chanux"
