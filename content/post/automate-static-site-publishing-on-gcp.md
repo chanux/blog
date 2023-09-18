@@ -33,7 +33,7 @@ And the whole thing is (mostly) automated with
 
 Check the following diagram[^1], because we all love nice diagrams.
 
-[![What To Achieve](/blog/images/automate-static-site-publishing-on-gcp/goal.png)](/blog/images/automate-static-site-publishing-on-gcp/goal.png)
+[![What To Achieve](/images/automate-static-site-publishing-on-gcp/goal.png)](/images/automate-static-site-publishing-on-gcp/goal.png)
 
 The Terraform configuration I use is in [this github
 repo](https://github.com/chanux/notes.chanux.me) alongside the site content for

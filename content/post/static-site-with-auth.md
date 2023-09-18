@@ -46,7 +46,7 @@ In a previous attempt, the whole deployment was automated with Google
 Cloud Run and it was quite pleasant to work with. So that's an idea if you want
 to take this further. However this is how I use mine today.
 
-![Object Serve in action](/blog/images/static-site-with-auth/object-serve-in-action.png)
+![Object Serve in action](/images/static-site-with-auth/object-serve-in-action.png)
 
 There's quite a bit of glue that holds this all together. I may polish up what
 I have and put it online sometime. Feel free to figure it out by reading the

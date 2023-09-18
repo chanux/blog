@@ -99,7 +99,7 @@ Ansible will process all the files in that, including executable scripts like
 the dynamic inventory file shown above. This way, you can free the dynamic
 inventory from static variables.
 
-```
+```sh
 % tree .
 .
 ├── inventory
@@ -120,7 +120,7 @@ misread (half-read) the documentation and thought it's only available in the
 latest version. A new set of eyes figured that's not the case.
 
 sample-playbook.yml
-```
+```yaml
 ---
 - hosts: localhost
   connection: local
@@ -141,7 +141,7 @@ sample-playbook.yml
 
 Run above playbook as follows
 
-```
+```bash
 ansible-playbook sample-playbook.yml -e "new_host=192.168.10.2 host_group=web"
 ```
 

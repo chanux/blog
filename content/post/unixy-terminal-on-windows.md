@@ -65,7 +65,7 @@ Now I'll quickly go through the process of integrating Babun with it and making 
 
 Launch ConEmu and right click on tab bar to access settings. Get to **Settings > Startup > Tasks**.
 
-[![ConeEmu settings dialogue](/blog/images/babun/conemu-babun.jpeg)](/blog/images/babun/conemu-babun.jpeg)
+[![ConeEmu settings dialogue](/images/babun/conemu-babun.jpeg)](/blog/images/babun/conemu-babun.jpeg)
 
 This is where we tweak it to load Babun. Create a new profile with [+] button,
 name it Bbaun, tick "Default task for new console" and set *Task parameters* as
