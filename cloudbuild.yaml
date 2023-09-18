@@ -8,7 +8,7 @@ steps:
           - https://github.com/nodejh/hugo-theme-mini
           - themes/mini
     - name: 'asia.gcr.io/$PROJECT_ID/hugo'
-      args: ['--theme', 'cactus-x']
+      args: ['--theme', 'mini']
     - name: 'gcr.io/cloud-builders/gsutil'
       args: ['cp', '-r', 'public/*', 'gs://$_GCS_BUCKET_NAME/blog']
     - name: 'gcr.io/cloud-builders/gsutil'
