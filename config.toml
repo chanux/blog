@@ -2,6 +2,8 @@ baseurl = "https://chanux.me/blog/"
 title   = "Chanux"
 theme   = "mini"
 
+canonifyurls = true
+
 [params]
     author  = "Chanux"
     bio     = "I am nothing"
