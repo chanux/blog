@@ -1,5 +1,5 @@
 ---
-title: "Ip Calculator for Me"
+title: "A IP Calculator For Me"
 date: 2024-04-06T20:09:27+08:00
 tags:
 categories:
