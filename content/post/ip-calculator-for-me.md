@@ -44,9 +44,9 @@ Next:		10.1.0.16
 As you can see, calc is inspired by ipcalc. Plus it shows the next IP.
 
 ```
-> ./ipeter cidr 10.0.1.0/24 overlaps 10.0.0.0/24
+> ipeter cidr 10.0.1.0/24 overlaps 10.0.0.0/24
 false
-> ./ipeter cidr 10.0.1.0/24 overlaps 10.0.0.0/8
+> ipeter cidr 10.0.1.0/24 overlaps 10.0.0.0/8
 true
 ```
 
@@ -60,26 +60,35 @@ Next up, I also did the check for ip being within a CIDR in the same style as
 above.
 
 ```
-> ./ipeter ip 10.0.0.36 in 10.0.0.0/27
+> ipeter ip 10.0.0.36 in 10.0.0.0/27
 false
-> ./ipeter ip 10.0.0.1 in 10.0.0.0/27
+> ipeter ip 10.0.0.1 in 10.0.0.0/27
 true
 ```
 
 However, to check multiple IPs at once, there's also 
 
 ```
-❯ ./ipeter contains 100.64.0.0/10 192.168.10.1 10.1.0.0 100.100.1.1
+> ipeter contains 100.64.0.0/10 192.168.10.1 10.1.0.0 100.100.1.1
 192.168.10.1 : false
 10.1.0.0	 : false
 100.100.1.1	 : true
+```
+
+And las but not least, quickly find out the netmasks that can house a given
+number of hosts
+
+```
+> ./ipeter mask 345 34
+netmask for 345 hosts is /23
+netmask for 34 hosts is /26
 ```
 
 Turns out I can do whatever I want when the intended audience is just one and
 it's just me! Don't use this software. Or do use. Do whatever you want.
 
 
-Asides:
+**Asides:**
 
 A IP calulator? [Yes](https://www.youtube.com/watch?v=mJUtMEJdvqM)!
 
