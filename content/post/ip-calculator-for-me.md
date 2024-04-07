@@ -79,7 +79,7 @@ And las but not least, quickly find out the netmasks that can house a given
 number of hosts
 
 ```
-> ./ipeter mask 345 34
+> ipeter mask 345 34
 netmask for 345 hosts is /23
 netmask for 34 hosts is /26
 ```
