@@ -66,7 +66,7 @@ false
 true
 ```
 
-However, to check multiple IPs at once, there's also 
+However, to check multiple IPs at once, there's also
 
 ```
 > ipeter contains 100.64.0.0/10 192.168.10.1 10.1.0.0 100.100.1.1
