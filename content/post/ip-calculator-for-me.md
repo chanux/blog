@@ -8,7 +8,7 @@ draft: false
 ---
 
 I have written a IP calcultor for personal use. Yes, there is a command line
-version the great, web based [ipcalc](https://jodies.de/ipcalc). I only
+version of the great, web based [ipcalc](https://jodies.de/ipcalc). I only
 recently discovered that and been using it since. That probably only delayed
 writing my own.
 
@@ -28,9 +28,9 @@ overlaps checks are built in!
 And here goes [ipeter](https://codeberg.org/chanux/ipeter)
 
 Naming is hard. I just named it after a colleague who I go to when I want some
-IPs I can safely use in my $dayjob.
+IPs I can safely use, in my $dayjob.
 
-Let me show you it's features
+Let me show you it's features!
 
 ```
 > ipeter calc 10.1.0.0/28
@@ -70,7 +70,7 @@ However, to check multiple IPs at once, there's also
 
 ```
 > ipeter contains 100.64.0.0/10 192.168.10.1 10.1.0.0 100.100.1.1
-192.168.10.1 : false
+192.168.10.1     : false
 10.1.0.0	 : false
 100.100.1.1	 : true
 ```
