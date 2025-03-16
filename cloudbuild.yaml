@@ -1,5 +1,5 @@
 steps:
-    - name: '$_DOCKER_REGISTRY/hugo:0.145.0'
+    - name: '$_DOCKER_REGISTRY/chanux/hugo:0.145.0'
     - name: 'gcr.io/cloud-builders/gsutil'
       args: ['cp', '-r', 'public/*', 'gs://$_GCS_BUCKET_NAME/blog']
     - name: 'gcr.io/cloud-builders/gsutil'
