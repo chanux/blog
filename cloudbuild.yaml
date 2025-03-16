@@ -1,15 +1,5 @@
 steps:
-    - name: gcr.io/cloud-builders/git
-      args:
-          - clone
-          - --depth=1
-          - --branch=master
-          - --single-branch
-          - https://github.com/nodejh/hugo-theme-mini
-          - themes/mini
-    - name: 'asia.gcr.io/$PROJECT_ID/hugo'
-    - name: '$_DOCKER_REGISTRY/hugo:0.118.2'
-      args: ['--theme', 'mini']
+    - name: '$_DOCKER_REGISTRY/hugo:0.145.0'
     - name: 'gcr.io/cloud-builders/gsutil'
       args: ['cp', '-r', 'public/*', 'gs://$_GCS_BUCKET_NAME/blog']
     - name: 'gcr.io/cloud-builders/gsutil'
