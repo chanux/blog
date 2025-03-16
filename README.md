@@ -28,12 +28,3 @@ chanux.localhost {
     file_server
 }
 ```
-
-## Notes
-
-I made the mistake of renaming `posts` dir to `post`. The theme does not work
-with this. So as a quick fix I need to manually change the theme.
-
-```
-sed -i '' 's/posts/post/'  themes/mini/layouts/partials/navigation.html
-```
