@@ -1,6 +1,20 @@
+---
 steps:
-    - name: '$_DOCKER_REGISTRY/chanux/hugo:0.145.0'
-    - name: 'gcr.io/cloud-builders/gsutil'
-      args: ['-m' , 'cp', '-r', 'public/*', 'gs://$_GCS_BUCKET_NAME/blog']
-    - name: 'gcr.io/cloud-builders/gsutil'
-      args: ['-m', 'cp', 'homepage/*', 'gs://$_GCS_BUCKET_NAME/']
+  - name: $_DOCKER_REGISTRY/chanux/hugo:0.145.0
+  - name: gcr.io/cloud-builders/gsutil
+    args: [cp, -r, public/*, gs://$_GCS_BUCKET_NAME/blog]
+  - name: node
+    entrypoint: npm
+    dir: homepage
+    args: [install]
+  - name: node
+    entrypoint: npm
+    dir: homepage
+    args: [run, build]
+  - name: gcr.io/cloud-builders/gsutil
+    dir: homepage
+    args: [cp, index.html, gs://$_GCS_BUCKET_NAME/test/]
+artifacts:
+  objects:
+    location: gs://$_GCS_BUCKET_NAME/test/
+    paths: [homepage/styles.css]
