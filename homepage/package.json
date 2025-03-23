@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production postcss -o styles.css main.css",
+    "dev": "postcss --use autoprefixer -o styles.css main.css --watch"
+  }
+}
